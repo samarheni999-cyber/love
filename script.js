@@ -4,11 +4,11 @@ noBtn.addEventListener("mouseover", () => {
     const maxX = window.innerWidth - noBtn.offsetWidth;
     const maxY = window.innerHeight - noBtn.offsetHeight;
 
-    // حركة صغيرة جدا (5px - 20px)
-    const shiftX = Math.random() * 15 + 5; // 5 → 20px
-    const shiftY = Math.random() * 15 + 5; // 5 → 20px
+    // حركة متوسطة (20px - 50px)
+    const shiftX = Math.random() * 30 + 20; // 20 → 50px
+    const shiftY = Math.random() * 30 + 20; // 20 → 50px
 
-    // اتجاه عشوائي (يمين/يسار، فوق/تحت)
+    // اتجاه عشوائي
     let dirX = Math.random() < 0.5 ? -1 : 1;
     let dirY = Math.random() < 0.5 ? -1 : 1;
 
