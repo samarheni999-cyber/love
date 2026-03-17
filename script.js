@@ -4,17 +4,19 @@ noBtn.addEventListener("mouseover", () => {
     const maxX = window.innerWidth - noBtn.offsetWidth;
     const maxY = window.innerHeight - noBtn.offsetHeight;
 
-    // تحرك عشوائي لكن محدود (50-100px)
-    const shiftX = Math.random() * 100 - 50;
-    const shiftY = Math.random() * 100 - 50;
+    // حركة صغيرة جدا (5px - 20px)
+    const shiftX = Math.random() * 15 + 5; // 5 → 20px
+    const shiftY = Math.random() * 15 + 5; // 5 → 20px
 
-    // المكان الحالي
+    // اتجاه عشوائي (يمين/يسار، فوق/تحت)
+    let dirX = Math.random() < 0.5 ? -1 : 1;
+    let dirY = Math.random() < 0.5 ? -1 : 1;
+
     let currentX = parseFloat(noBtn.style.left) || 0;
     let currentY = parseFloat(noBtn.style.top) || 0;
 
-    // الموقع الجديد
-    let newX = currentX + shiftX;
-    let newY = currentY + shiftY;
+    let newX = currentX + shiftX * dirX;
+    let newY = currentY + shiftY * dirY;
 
     // ما يخرجش من الشاشة
     newX = Math.max(0, Math.min(maxX, newX));
