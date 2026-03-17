@@ -1,0 +1,90 @@
+/* ===== BODY ===== */
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+flex-direction:column;
+text-align:center;
+overflow:hidden;
+font-family:Arial;
+
+/* background */
+background: linear-gradient(45deg, #ffe6f0, #ffd6e7, #ffe6f0);
+background-size: 400% 400%;
+animation: bgMove 6s infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* ===== IMAGE ===== */
+img{
+width:200px;
+margin-top:20px;
+}
+
+/* ===== TEXT ===== */
+h1{
+margin-top:20px;
+}
+
+/* ===== BUTTONS ===== */
+.buttons{
+margin-top:20px;
+position:relative;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+margin:10px;
+cursor:pointer;
+position:relative;
+transition:0.3s;
+}
+
+/* No button */
+.no{
+position:absolute;
+}
+
+/* click effect */
+button:active{
+background-color:#ff4d88;
+color:white;
+}
+
+/* Yes zoom */
+.yes:active{
+transform: scale(1.2);
+}
+
+/* ===== MESSAGE ===== */
+#message{
+font-size:30px;
+color:red;
+margin-top:20px;
+display:none;
+}
+
+/* ===== HEARTS ===== */
+.heart{
+position:absolute;
+color:#ff4d88;
+animation: floatUp 3s linear forwards;
+}
+
+@keyframes floatUp{
+0%{
+transform: translateY(0) scale(1);
+opacity:1;
+}
+100%{
+transform: translateY(-300px) scale(1.5);
+opacity:0;
+}
+}
