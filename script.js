@@ -4,26 +4,12 @@ noBtn.addEventListener("mouseover", () => {
     const maxX = window.innerWidth - noBtn.offsetWidth;
     const maxY = window.innerHeight - noBtn.offsetHeight;
 
-    // حركة متوسطة (20px - 50px)
-    const shiftX = Math.random() * 30 + 20; // 20 → 50px
-    const shiftY = Math.random() * 30 + 20; // 20 → 50px
+    // موقع عشوائي
+    let x = Math.random() * maxX;
+    let y = Math.random() * maxY;
 
-    // اتجاه عشوائي
-    let dirX = Math.random() < 0.5 ? -1 : 1;
-    let dirY = Math.random() < 0.5 ? -1 : 1;
-
-    let currentX = parseFloat(noBtn.style.left) || 0;
-    let currentY = parseFloat(noBtn.style.top) || 0;
-
-    let newX = currentX + shiftX * dirX;
-    let newY = currentY + shiftY * dirY;
-
-    // ما يخرجش من الشاشة
-    newX = Math.max(0, Math.min(maxX, newX));
-    newY = Math.max(0, Math.min(maxY, newY));
-
-    noBtn.style.left = newX + "px";
-    noBtn.style.top = newY + "px";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
 });
 /* ===== YES BUTTON ===== */
 function showLove(){
