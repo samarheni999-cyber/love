@@ -4,7 +4,7 @@ noBtn.addEventListener("mouseover", () => {
     const maxX = window.innerWidth - noBtn.offsetWidth;
     const maxY = window.innerHeight - noBtn.offsetHeight;
 
-    // موقع عشوائي
+    // موقع عشوائي لكن قريب من الماوس
     let x = Math.random() * maxX;
     let y = Math.random() * maxY;
 
